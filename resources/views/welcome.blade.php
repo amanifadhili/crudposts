@@ -47,7 +47,7 @@
     <div class="container">
         <h1>Welcome to CRUD Posts</h1>
         <p>A simple Laravel application for managing blog posts.</p>
-        <a href="" class="btn">View Posts</a>
+        <a href="/posts" class="btn">View Posts</a>
     </div>
 </body>
 </html>
