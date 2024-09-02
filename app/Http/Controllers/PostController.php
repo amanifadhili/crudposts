@@ -59,7 +59,7 @@ class PostController extends Controller
     {
       $request->validate([
         'title' => 'required|max:255',
-        'body' => 'required',
+        'content' => 'required',
       ]);
       $post = Post::find($id);
       $post->update($request->all());

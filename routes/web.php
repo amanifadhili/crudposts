@@ -25,7 +25,7 @@ route::get('/editpostform/{post}', PostController::class .'@editpostform')->name
 Route::get('/posts', PostController::class .'@showpost' )->name('viewpost');
 
 // all update
-Route::put('/posts/{post}', PostController::class .'@update')->name('posts.update');
+Route::put('/update/{post}', PostController::class .'@update')->name('posts.update');
 
 
 //all post

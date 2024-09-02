@@ -5,6 +5,7 @@
    <h1 class="text-3xl font-bold mb-6">edit post</h1>
    <form method="post" action="{{ route('posts.update', $post->id) }}" class="space-y-4">
     @csrf
+    @method('PUT')
     <div>
         <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
         <input type="text" value="{{ $post->title }}" id="title" name="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
