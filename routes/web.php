@@ -1,7 +1,7 @@
 <?php
-use App\Models\post;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,24 +17,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/posts',function () {
-    $posts = post::all();
-    return view('posts' , compact('posts'));
-});
+// all get
+Route::get('/dashboard', PostController::class .'@welcomepage');
+Route::get('/backtopost', PostController::class .'@backtopost');
+route::get('/addposts', PostController::class .'@addpost');
+route::get('/editpostform/{post}', PostController::class .'@editpostform')->name('posts.editform');
+Route::get('/posts', PostController::class .'@showpost' )->name('viewpost');
 
-Route::get('/dashboard',function () {
-    return view('welcome');
-});
+// all update
+Route::put('/posts/{post}', PostController::class .'@update')->name('posts.update');
 
-route::get('/addposts',function () {
-    return view('addposts');
-} );
 
-Route::post('/addpost', function () {
-    $post = new post();
-    $post->title = request('title');
-    $post->content = request('content');
-    $post->save(); 
-    return redirect('/posts');
-})->name('addpost');
+//all post
+Route::post('/addpost', PostController::class .'@store')->name('addpost');
+
+// delete
+Route::delete('/posts/{post}', PostController::class .'@destroy')->name('posts.destroy');
+
 require __DIR__.'/auth.php';
