@@ -22,4 +22,19 @@ Route::get('/posts',function () {
     return view('posts' , compact('posts'));
 });
 
+Route::get('/dashboard',function () {
+    return view('welcome');
+});
+
+route::get('/addposts',function () {
+    return view('addposts');
+} );
+
+Route::post('/addpost', function () {
+    $post = new post();
+    $post->title = request('title');
+    $post->content = request('content');
+    $post->save(); 
+    return redirect('/posts');
+})->name('addpost');
 require __DIR__.'/auth.php';

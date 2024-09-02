@@ -9,7 +9,7 @@
 <body class="flex flex-col min-h-screen bg-gray-100">
     <nav class="bg-blue-600 text-white p-4">
         <ul class="flex space-x-4">
-            <li><a href="" class="hover:text-blue-200">Dashboard</a></li>
+            <li><a href="../dashboard" class="hover:text-blue-200">Dashboard</a></li>
             <li><a href="" class="hover:text-blue-200">back</a></li>
         </ul>
     </nav>

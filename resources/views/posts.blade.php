@@ -3,7 +3,7 @@
 @section('admin')
 <section class="container mx-auto p-6">
    <h1 class="text-3xl font-bold mb-6">Posts</h1>
-   <a href="" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">add new post</a>
+   <a href="/addposts" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">add new post</a>
    <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
        <thead class="bg-gray-100">
            <tr>
