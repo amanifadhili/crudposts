@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
@@ -23,6 +24,8 @@ Route::get('/backtopost', PostController::class .'@backtopost');
 route::get('/addposts', PostController::class .'@addpost');
 route::get('/editpostform/{post}', PostController::class .'@editpostform')->name('posts.editform');
 Route::get('/posts', PostController::class .'@showpost' )->name('viewpost');
+
+Route::get('/allusers', UserController::class .'@show_all_user');
 
 
 // Route::get('/allusers', PostController::class .'@')
