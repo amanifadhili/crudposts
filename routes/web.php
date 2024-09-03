@@ -24,6 +24,9 @@ route::get('/addposts', PostController::class .'@addpost');
 route::get('/editpostform/{post}', PostController::class .'@editpostform')->name('posts.editform');
 Route::get('/posts', PostController::class .'@showpost' )->name('viewpost');
 
+
+// Route::get('/allusers', PostController::class .'@')
+
 // all update
 Route::put('/update/{post}', PostController::class .'@update')->name('posts.update');
 

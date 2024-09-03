@@ -48,6 +48,7 @@
         <h1>Welcome to CRUD Posts</h1>
         <p>A simple Laravel application for managing blog posts.</p>
         <a href="/posts" class="btn">View Posts</a>
+        <a href="/allusers" class="btn">View all users</a>
     </div>
 </body>
 </html>
